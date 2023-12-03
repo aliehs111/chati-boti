@@ -1,0 +1,20 @@
+{
+    "name": "social_network_api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "seed": "node utils/seed",
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dateformat": "^4.5.1",
+        "dotenv": "^16.3.1",
+        "express": "^4.17.1",
+        "mongoose": "^7.0.2"
+    }
+}
