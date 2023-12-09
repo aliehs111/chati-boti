@@ -1,0 +1,246 @@
+.page {
+  background-color: #d6d3d3 !important;
+  min-height: 76vh;
+}
+/* header */
+.header {
+  background-color: #003249 !important;
+  min-height: 140px !important;
+}
+
+.name {
+  color: #e36397 !important;
+  font-size: 50px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.project {
+  background-color: #003249 !important;
+}
+
+/* footer */
+.footer {
+  background-color: #003249 !important;
+  color: rgb(186, 181, 181) !important;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #003249 !important;
+  color: #003249 !important;
+  border-color: #e36397 !important;
+  color: rgb(186, 181, 181) !important;
+}
+
+/* Card Styling */
+.card-border {
+  border-color: #e36397 !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+}
+
+.card-body {
+  background-color: whitesmoke !important;
+  color: #003249 !important;
+  border-color: #e36397 !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-radius: 5px !important;
+  margin: 10px !important;
+  padding: 10px !important;
+  font-size: 20px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  text-align: center !important;
+  box-shadow: 5px 5px 5px #003249 !important;
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.card-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* contact form styling */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-container .custom-form {
+  width: 50% !important;
+}
+
+.outline {
+  border: 2px solid #e36397 !important;
+  border-radius: 5px !important;
+}
+
+/* Style for the navigation bar */
+.nav-link:hover {
+  color: #e36397 !important;
+}
+
+
+.active {
+  color: #e36397 !important;
+}
+
+.resume-card {
+  max-width: 60% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+  font-size: 15px !important;
+}
+/* Style for the contact information */
+.contact-info {
+  font-size: 18px !important;
+  margin-bottom: 10px !important;
+  display: block !important;
+}
+.contact-card {
+  font-size: 15px !important;
+}
+
+
+/* Increase specificity for .contact-info */
+div .contact-info i {
+  margin-right: 10px !important;
+  color: #007bff !important; /* Icon color */
+}
+
+div .contact-info a {
+  text-decoration: none !important;
+  color: #e36397 !important; /* Link color */
+  transition: color 0.3s ease !important;
+}
+
+div .contact-info a:hover {
+  color: #007bff !important; /* Hover color */
+}
+/* Style for the profile photo */
+.profile-photo {
+  max-width: 400px; 
+  max-height: 325px; 
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;
+  border-radius: 4%;
+  box-shadow: 5px 5px 5px 5px #dda8bd !important;
+}
+.carousel-container {
+  box-shadow: 5px 5px 5px 5px #003249 !important;
+  /* margin: 10px !important; */
+  /* margin-left: auto !important; */
+}
+
+
+.about-me {
+  /* font-size: 15px !important; */
+  margin: 20px !important;
+  padding: 10px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  box-shadow: 5px 5px 5px 5px #003249 !important;
+  /* max-width: 70% !important; */
+  justify-self: left !important;
+}
+.about-me h1 {
+  font-size: 35px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+  color: #e36397 !important;
+}
+
+/* .about-container {
+  display: flex !important;
+  flex-direction: column;
+  align-items: left;
+  padding: 40px;
+  border-radius: 3% !important;
+  margin: 10px !important;
+
+} */
+
+/* back to top button on portfolio page */
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.btn:hover {
+  background-color: #e36397 !important;
+  color: #003249 !important;
+}
+
+/* .carousel-ptag {
+  color: #003249 !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-style: italic;
+  line-height: 1.2;
+  margin-left: 7px !important;
+  margin-right: 7px !important;
+} */
+/* .caption {
+  border: #dda8bd 2px solid !important;
+  border-radius: 5px !important;
+  background-color: whitesmoke !important;
+  width: 450px !important;
+  height: 100px !important;
+  box-shadow: 5px 5px 5px 5px #003249 !important;
+  padding: 10px !important;
+
+} */
+
+ /* OffCanvas Container styles */
+.offcanvas-container {
+  background-color: #003249 !important;
+  color: #e36397 !important;
+ 
+}
+ /* Header styles */
+.offcanvas-header {
+  background-color: #e36397;
+  color: #003249 !important;
+ 
+}
+ /* Title styles */
+.offcanvas-title {
+  font-size: 24px;
+ 
+}
+ /* List item styles */
+.offcanvas-list-item {
+  font-size: 25px;
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove any default padding */
+  text-align: center; /* Center the text */
+  margin-bottom: 10px; /* Add spacing between list items */
+ 
+}
+
+
+
+
+
