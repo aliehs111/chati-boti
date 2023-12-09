@@ -1,15 +1,15 @@
 .page {
-  background-color: #d6d3d3 !important;
+  background-color: #c7d7e5 !important;
   min-height: 76vh;
 }
 /* header */
 .header {
-  background-color: #003249 !important;
+  background-color: #020303 !important;
   min-height: 140px !important;
 }
 
 .name {
-  color: #e36397 !important;
+  color: #94e363 !important;
   font-size: 50px !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -166,15 +166,7 @@ div .contact-info a:hover {
   color: #e36397 !important;
 }
 
-/* .about-container {
-  display: flex !important;
-  flex-direction: column;
-  align-items: left;
-  padding: 40px;
-  border-radius: 3% !important;
-  margin: 10px !important;
 
-} */
 
 /* back to top button on portfolio page */
 .back-to-top {
@@ -192,26 +184,6 @@ div .contact-info a:hover {
   color: #003249 !important;
 }
 
-/* .carousel-ptag {
-  color: #003249 !important;
-  font-size: 14px !important;
-  font-weight: bold !important;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-style: italic;
-  line-height: 1.2;
-  margin-left: 7px !important;
-  margin-right: 7px !important;
-} */
-/* .caption {
-  border: #dda8bd 2px solid !important;
-  border-radius: 5px !important;
-  background-color: whitesmoke !important;
-  width: 450px !important;
-  height: 100px !important;
-  box-shadow: 5px 5px 5px 5px #003249 !important;
-  padding: 10px !important;
-
-} */
 
  /* OffCanvas Container styles */
 .offcanvas-container {
