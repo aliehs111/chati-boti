@@ -4,28 +4,26 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 
 function Signup() {
-  //state variables//
+  // state variables
   const [formData, setFormData] = useState({
+    username: "", // Add username field
     email: "",
     password: "",
   });
-  //state variables to handle success and errors//
+
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  //event handler for form input change//
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  //event handler for form submission//
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      //send POST request to backend API to create new user//
-      const response = await axios.post("/api/user", formData);
-      //handle success response
+      const response = await axios.post('http://localhost:3001/api/user', formData);
       if (response.status === 201) {
         setSuccessMessage("User registration successful");
         setErrorMessage("");
@@ -44,10 +42,30 @@ function Signup() {
       {successMessage && <p className="text-success">{successMessage}</p>}
       {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
-      <Form>
+      <Form onSubmit={handleSubmit}>
+        {/* Add username input */}
+        <Form.Group className="mb-3" controlId="formBasicUsername">
+          <Form.Label>Username</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+          />
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
@@ -55,7 +73,14 @@ function Signup() {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
