@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3001/api'; // Adjust this URL as needed
+const API_BASE_URL = 'http://localhost:3001'; // Adjust this URL as needed
 
 // Function to get all users
 export const getAllUsers = () => {
