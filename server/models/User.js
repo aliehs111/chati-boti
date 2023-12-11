@@ -13,6 +13,11 @@ const UserSchema = new Schema({
         required: [true, 'Email is required'],
         match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
     },
+    password: {
+        type: String,
+        required: [true, 'Password is required'],
+        minlength: 4
+    },
     thoughts: [{
         type: Schema.Types.ObjectId,
         ref: 'Thought'

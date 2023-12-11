@@ -20,10 +20,13 @@ function Signup() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const response = await axios.post('http://localhost:3001../api/user', formData);
+      const response = await axios.post(
+        "http://localhost:3001/api/user",
+        formData
+      );
 
       if (response.status === 201) {
         setSuccessMessage("User registration successful");
