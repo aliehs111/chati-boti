@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/aliehs111/chati-boti/issues"
   },
-  "homepage": "https://github.com/aliehs111/chati-boti#readme",
+  "homepage": "/.",
   "devDependencies": {
     "concurrently": "^8.2.2"
   },

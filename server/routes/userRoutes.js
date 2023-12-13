@@ -14,7 +14,7 @@ router.get("", getAllUsers);
 //get user by id
 router.get("/:id", getUserById);
 //create user
-router.post("", createUser);
+router.post("/client/api/user", createUser);
 //update user by id
 router.put("/:id", updateUserById);
 //delete user by id

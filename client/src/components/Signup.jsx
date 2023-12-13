@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 
+const endpoint = "http://localhost:3001/api/user";
+
 function Signup() {
-  // state variables
   const [formData, setFormData] = useState({
-    username: "", // Add username field
+    username: "",
     email: "",
     password: "",
   });
 
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,24 +23,27 @@ function Signup() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    setIsLoading(true);
 
     try {
-      const response = await axios.post(
-        "http://localhost:3001/api/user",
-        formData
-      );
+      const response = await axios.post(`${endpoint}`, formData);
+
 
       if (response.status === 201) {
         setSuccessMessage("User registration successful");
         setErrorMessage("");
+        setFormData({ username: "", email: "", password: "" }); // Reset the form
       }
     } catch (error) {
+      console.error("Error during registration:", error);
       if (error.response) {
         setErrorMessage(error.response.data.message);
       } else {
         setErrorMessage("An error occurred while registering user");
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -47,7 +53,6 @@ function Signup() {
       {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
       <Form onSubmit={handleSubmit}>
-        {/* Add username input */}
         <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
           <Form.Control
@@ -86,11 +91,9 @@ function Signup() {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
+
+        <Button variant="primary" type="submit" disabled={isLoading}>
+          {isLoading ? "Submitting..." : "Submit"}
         </Button>
       </Form>
     </div>
