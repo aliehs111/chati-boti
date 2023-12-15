@@ -4,7 +4,7 @@ const cors = require("cors");
 
 mongoose
   .connect(
-    process.env.MONGODB_URI || "mongodb://localhost/social_network_api",
+    process.env.MONGODB_URI || "mongodb://localhost/chati-boti",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

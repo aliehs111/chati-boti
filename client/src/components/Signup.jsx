@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios, { formToJSON } from "axios";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const endpoint = "http://localhost:3001/api/users";
 
@@ -27,15 +27,15 @@ function Signup() {
     e.preventDefault();
     setIsLoading(true);
 
-    if (formData.username.length <= 3) {
-      toast.error("Username must be at least 3 characters", {
-        position: "top-right",
-        theme: "light",
-      });
+    // if (formData.username.length <= 3) {
+    //   toast.error("Username must be at least 3 characters", {
+    //     position: "top-right",
+    //     theme: "light",
+    //   });
 
-      console.log("Please enter a username with 3 or more characters");
-      return;
-    }
+    //   console.log("Please enter a username with 3 or more characters");
+    //   return;
+    // }
 
     try {
       const response = await axios.post(endpoint, formData);

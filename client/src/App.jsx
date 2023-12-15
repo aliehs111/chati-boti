@@ -7,13 +7,13 @@ import Signin from "./components/Signin";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <ToastContainer />
+        {/* <ToastContainer /> */}
 
         <Header>
           <h1>I am rendering from App.jsx h1 tag</h1>
